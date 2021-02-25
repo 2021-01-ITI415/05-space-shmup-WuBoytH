@@ -47,6 +47,12 @@ public class Hero : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift)){
+            speed = 45;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift)){
+            speed = 30;
+        }
         // Pull in information from the Input class
         float xAxis = Input.GetAxis("Horizontal");
         float yAxis = Input.GetAxis("Vertical");
